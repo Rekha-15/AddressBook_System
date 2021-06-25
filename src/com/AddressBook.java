@@ -11,10 +11,8 @@ package com;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class AddressBook implements IAddressBook {
 
@@ -23,8 +21,8 @@ public class AddressBook implements IAddressBook {
 	Map<String, Person> hashmap = new HashMap<>();
 
 	/**
-	 * add method is public void type add method used to add contact details to
-	 * address book
+	 * add method is public void type 
+	 * add method used to add contact details to address book
 	 */
 
 	public void add() {
@@ -135,8 +133,9 @@ public class AddressBook implements IAddressBook {
 	}
 
 	/**
-	 * display is a public void type, display method used to display the entered
-	 * details. Creating display method to display the contact details
+	 * display is a public void type, 
+	 * display method used to display the entered details. 
+	 * Creating display method to display the contact details
 	 */
 
 	public void display() {
@@ -149,6 +148,11 @@ public class AddressBook implements IAddressBook {
 		}
 	}
 
+	/**
+	 * duplicateCheck is an public void type
+	 *  ensuring there is no Duplicate Entry of the same Person in a Address Book
+	 *
+	 */
 	public void duplicateCheck(String firstName) {
 		for (int k = 0; k < personList.size(); k++) {
 			String contactName = personList.get(k).firstName;

@@ -20,6 +20,7 @@ import java.util.Scanner;
  * 3=editing contact details
  * 4=deleting details
  * 5=adding multiple persons
+ * 6=ensuring there is no Duplicate Entry of the same Person in a Address Book
  */
 
 public class Runner {

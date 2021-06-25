@@ -9,7 +9,9 @@ public class AddressBook implements IAddressBook {
 	ArrayList<Person> personList = new ArrayList<Person>();
 
 	/**
-	 * Uc2: Ability to add a new contact to Address Book
+	 * add method is public void type
+	 * add method used to add contact details
+	 * Ability to add a new contact to Address Book
 	 */
 
 	@Override
@@ -34,6 +36,12 @@ public class AddressBook implements IAddressBook {
 		System.out.println("Contact added successfully");
 	}
 
+	/**
+	 * display is a public void type
+	 * display method used to display the entered details.
+	 * Creating display method to display the contact details 
+	 */
+	
 	public void display() {
 		for (int i = 0; i < personList.size(); i++) {
 			Person person = personList.get(i);
@@ -44,6 +52,13 @@ public class AddressBook implements IAddressBook {
 		}
 	}
 
+	/**
+	 * main method 
+	 * Printing welcome message
+	 *  
+	 * @param args - argument, its an actual value that are passed to variables.
+	 * 
+	 */
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Address Book Problem");
 		AddressBook adressBookImplementation =new AddressBook();

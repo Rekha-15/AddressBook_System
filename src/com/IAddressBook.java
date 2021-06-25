@@ -25,5 +25,7 @@ public interface IAddressBook {
 	
 	void addMultiplePerson();
 	
+	void duplicateCheck(String firstName);
+	
 
 }

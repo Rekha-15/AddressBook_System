@@ -18,7 +18,7 @@ public interface IAddressBook {
 
 	void display();
 
-	void edit();
+	void edit(String firstName);
 
 	void delete(String firstName);
 
@@ -37,5 +37,10 @@ public interface IAddressBook {
 	 * AddressBook
 	 */
 	void searchPersonByState(String firstname);
+
+	/**
+	 * Uc9: view person by city or state
+	 */
+	void viewByCity(String city);
 
 }

@@ -14,7 +14,7 @@ package com;
  */
 
 public interface IAddressBook {
-
+	
 	void add();
 
 	void display();

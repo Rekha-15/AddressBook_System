@@ -7,6 +7,8 @@
 
 package com;
 
+import java.util.List;
+
 /**
  * Person is a class of public type 
  * In this Person class setting and getting required values
@@ -45,6 +47,10 @@ public class Person {
 		this.state = state;
 		this.mobileNo = mobileNo2;
 		this.zip = zip2;
+	}
+
+	public Person(String name, List<Person> personList) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getFirstName() {

@@ -1,9 +1,10 @@
-/**
+/************************************************************
  * @Purpose Implementing Address Book Problem .
  * -Uc1 Creating contacts for Address Book
- * @author rekha
- *
- */
+ * @author Rekha
+ * @version 1.0
+ * @since 24/06/2021
+ **************************************************************/
 
 package com;
 
@@ -47,7 +48,7 @@ public class Person {
 	        this.zip = zip;
 	    }
 	
-	public String getFirstNake() {
+	public String getFirstName() {
 		return firstName;
 	}
 	public void setFirstName(String firstName) {

@@ -1,7 +1,7 @@
 /************************************************************
  * @Purpose Implementing Address Book Problem .
  * Created new contact, Ability to add or display or 
- * edit or delete a contact in Address Book.
+ * edit or delete or add multiple person to a contact in Address Book.
  * @author Rekha
  * @version 1.0
  * @since 24/06/2021
@@ -22,7 +22,6 @@ public class AddressBook implements IAddressBook {
 	 * add method used to add contact details to address book
 	 */
 
-	@Override
 	public void add() {
 		System.out.println("Enter your first name");
 		String firstName = scanner.nextLine();
@@ -114,6 +113,20 @@ public class AddressBook implements IAddressBook {
 				Person person = personList.get(i);
 				personList.remove(person);
 			}
+		}
+	}
+	
+	/**
+	  *Creating AddMultiplePerson method , so that user can add the contact details 
+	  *by entering person name user can delete the contact.
+	  *If contact person already present it display duplicate statement
+	  */
+	
+	public void addMultiplePerson() {
+		System.out.println("Enter a person Name:");
+		String firstName = scanner.nextLine();
+		for (int i = 0; i < personList.size(); i++) {
+			Person person = personList.get(i);
 		}
 	}
 

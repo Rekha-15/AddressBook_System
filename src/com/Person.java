@@ -8,50 +8,29 @@
 package com;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
- * Person is a class of public type 
- * In this Person class setting and getting required values
- * And initializing all required details has string
+ * Person is a class of public type In this Person class setting and getting
+ * required values And initializing all required details has string
  *
  */
 
 public class Person {
 
-	public String firstName;
-	public String lastName;
-	public String address;
-	public String city;
-	public String state;
-	public String mobileNo;
-	public String zip;
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String city;
+	private String state;
+	private String email;
+	private String zipcode;
+	private String phoneNumber;
 
 	/**
-	 * setting and getting values for Person
-	 * 
-	 * @param firstName
-	 * @param lastName
-	 * @param address
-	 * @param city
-	 * @param state
-	 * @param zip2
-	 * @param phoneNumber
+	 * The getter method returns the value of the attribute. The setter method takes
+	 * a parameter and assigns it to the attribute.
 	 */
-
-	public Person(String firstName, String lastName, String address, String city, String state, String mobileNo2,
-			String zip2) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.city = city;
-		this.state = state;
-		this.mobileNo = mobileNo2;
-		this.zip = zip2;
-	}
-
-	public Person(String name, List<Person> personList) {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getFirstName() {
 		return firstName;
@@ -93,25 +72,74 @@ public class Person {
 		this.state = state;
 	}
 
-	public String getPincode() {
-		return zip;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setPincode(String string) {
-		this.zip = string;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getMobileNo() {
-		return mobileNo;
+	public String getZipcode() {
+		return zipcode;
 	}
 
-	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
-				+ ", state=" + state + ", pincode=" + zip + ", mobileNo=" + mobileNo + "]" + "\n";
+		return "Person{" + "firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", email=" + email + ", zipcode=" + zipcode + ", phoneNumber="
+				+ phoneNumber + '}';
 	}
+
+	@Override
+	public int hashCode() {
+		int hash = 7;
+		hash = 29 * hash + Objects.hashCode(this.firstName);
+		hash = 29 * hash + Objects.hashCode(this.lastName);
+		return hash;
+	}
+
+	/**
+	 * Ability to ensure there is no Duplicate Entry of the same Person in a
+	 * particular Address.
+	 * 
+	 * This method checks if some other Object passed to it as an argument is equal
+	 * to the Object on which it is invoked.
+	 *
+	 * @param obj
+	 * @return
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final Person other = (Person) obj;
+		if (!Objects.equals(this.firstName, other.firstName)) {
+			return false;
+		}
+		if (!Objects.equals(this.lastName, other.lastName)) {
+			return false;
+		}
+		return true;
+	}
+
 }

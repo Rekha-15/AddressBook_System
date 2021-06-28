@@ -43,4 +43,9 @@ public interface IAddressBook {
 	 */
 	void viewByCity(String city);
 
+	/**
+	 * Uc10: count by city or state
+	 */
+	void searchPersonInCity(String firstName);
+
 }
